@@ -33,7 +33,7 @@ Deletes the log file after it's successfully sent, leaving no trace behind.
 
 ```bash
 git clone https://github.com/5odead/Trevent.git
-cd LOGMEDADDY
+cd Trevent
 ```
 #### **Run the Keylogger:**
 ```bash
