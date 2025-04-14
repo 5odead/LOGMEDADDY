@@ -42,7 +42,7 @@ python3 exfiltration.py
 ```
 ---
 > 💡 **Note:**  
-> Set `KEYBOARD_DEVICE` to your actual event number, or the logger won't capture anything.  
+> Set `KEYBOARD_DEVICE` to your actual keyboard event number, or the logger won't capture anything.  
 > Update `CHAT_ID` and `BOT_TOKEN` in your exfiltration script, or the data won't get sent.
 ---
 > ⚠️ **Disclaimer:**  
