@@ -4,7 +4,6 @@
 
 Trevent is a Python-based lightweight keylogger and exfiltration tool designed for cybersecurity research and educational purposes.
 
----
 
 ###  Features
 
@@ -24,8 +23,6 @@ Sends the captured logs to a Telegram chat securely.
 Deletes the log file after it's successfully sent, leaving no trace behind.
 
 
----
-
 
 ###  Example Usage:
 
@@ -43,7 +40,11 @@ python3 keylogger.py
 ```bash
 python3 exfiltration.py
 ```
-
+---
+> 💡 **Note:**  
+> Set `KEYBOARD_DEVICE` to your actual event number, or the logger won't capture anything.  
+> Update `CHAT_ID` and `BOT_TOKEN` in your exfiltration script, or the data won't get sent.
+---
 > ⚠️ **Disclaimer:**  
 This tool is intended for educational purposes only. It should only be used in controlled environments with explicit permission. Unauthorized use is illegal and unethical.
 
