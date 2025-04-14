@@ -1,8 +1,8 @@
 
-##  LOGMEDADDY — Linux Keylogger & Exfiltration (for Red Team & Cybersecurity)
+##  Trevent — Linux Keylogger & Exfiltration (for Red Team & Cybersecurity)
 
 
-LOGMEDADDY is a Python-based lightweight keylogger and exfiltration tool designed for cybersecurity research and educational purposes.
+Trevent is a Python-based lightweight keylogger and exfiltration tool designed for cybersecurity research and educational purposes.
 
 ---
 
@@ -32,7 +32,7 @@ Deletes the log file after it's successfully sent, leaving no trace behind.
 #### **Clone the Repository:**
 
 ```bash
-git clone https://github.com/5odead/LOGMEDADDY.git
+git clone https://github.com/5odead/Trevent.git
 cd LOGMEDADDY
 ```
 #### **Run the Keylogger:**
