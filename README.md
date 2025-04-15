@@ -32,6 +32,13 @@ Deletes the log file after it's successfully sent, leaving no trace behind.
 git clone https://github.com/5odead/Trevent.git
 cd Trevent
 ```
+
+> 💡 **Note:**  
+>
+> 1. Set `KEYBOARD_DEVICE` to your actual keyboard event number, or the logger won't capture anything.
+>
+> 2. Update `CHAT_ID` and `BOT_TOKEN` in your exfiltration script, or the data won't get sent.
+
 #### **Run the Keylogger:**
 ```bash
 python3 keylogger.py
@@ -40,11 +47,11 @@ python3 keylogger.py
 ```bash
 python3 exfiltration.py
 ```
----
-> 💡 **Note:**  
-> Set `KEYBOARD_DEVICE` to your actual keyboard event number, or the logger won't capture anything.  
-> Update `CHAT_ID` and `BOT_TOKEN` in your exfiltration script, or the data won't get sent.
----
+
+
+
+
+
 > ⚠️ **Disclaimer:**  
 This tool is intended for educational purposes only. It should only be used in controlled environments with explicit permission. Unauthorized use is illegal and unethical.
 
