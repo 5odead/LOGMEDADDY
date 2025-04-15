@@ -51,7 +51,7 @@ python3 exfiltration.py
 
 
 
-
+---
 > ⚠️ **Disclaimer:**  
 This tool is intended for educational purposes only. It should only be used in controlled environments with explicit permission. Unauthorized use is illegal and unethical.
 
