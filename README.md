@@ -41,11 +41,11 @@ cd Trevent
 
 #### **Run the Keylogger:**
 ```bash
-python3 Trevent_keylogger.py
+python3 Keylogger.py
 ```
 #### **Run the Exfiltration Script:**
 ```bash
-python3 Trevent_exfiltration.py
+python3 Exfiltration.py
 ```
 
 
